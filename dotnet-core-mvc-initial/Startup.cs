@@ -25,16 +25,8 @@ namespace dotnet_core_mvc_initial
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            
+            app.UseFileServer();
         }
     }
 }
