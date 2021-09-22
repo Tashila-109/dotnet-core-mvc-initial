@@ -21,6 +21,7 @@ namespace dotnet_core_mvc_initial
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseExceptionHandler("/error.html");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
